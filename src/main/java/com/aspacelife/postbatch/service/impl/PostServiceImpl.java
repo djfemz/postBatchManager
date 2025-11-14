@@ -1,6 +1,6 @@
 package com.aspacelife.postbatch.service.impl;
 
-import com.aspacelife.postbatch.dto.PageResponse;
+import com.aspacelife.postbatch.dto.response.PageResponse;
 import com.aspacelife.postbatch.dto.response.PostApiResponse;
 import com.aspacelife.postbatch.exception.BatchInsertException;
 import com.aspacelife.postbatch.model.Post;

@@ -1,6 +1,6 @@
 package com.aspacelife.postbatch.controller;
 
-import com.aspacelife.postbatch.dto.PageResponse;
+import com.aspacelife.postbatch.dto.response.PageResponse;
 import com.aspacelife.postbatch.dto.request.BatchInsertRequest;
 import com.aspacelife.postbatch.dto.response.BaseResponse;
 import com.aspacelife.postbatch.exception.BatchInsertException;

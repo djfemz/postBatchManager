@@ -1,4 +1,4 @@
-package com.aspacelife.postbatch.dto;
+package com.aspacelife.postbatch.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

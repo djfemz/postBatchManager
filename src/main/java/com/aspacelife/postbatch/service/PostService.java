@@ -1,6 +1,6 @@
 package com.aspacelife.postbatch.service;
 
-import com.aspacelife.postbatch.dto.PageResponse;
+import com.aspacelife.postbatch.dto.response.PageResponse;
 import com.aspacelife.postbatch.model.Post;
 
 import java.util.concurrent.CompletableFuture;
