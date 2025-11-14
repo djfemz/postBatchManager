@@ -25,7 +25,7 @@ The application will start on `http://localhost:8080`
 
 ### 1. Batch Insert Posts
 ```bash
-curl -X POST http://localhost:8080/api/posts/batch_insert \
+curl -X POST http://localhost:8080/api/v1/posts/batch_insert \
   -H "Content-Type: application/json" \
   -d '{"postNumber": 24}'
 ```
@@ -33,15 +33,15 @@ curl -X POST http://localhost:8080/api/posts/batch_insert \
 ### 2. Fetch Records (Paginated)
 ```bash
 # Get first page (default: 10 records)
-curl http://localhost:8080/api/posts/fetch_record
+curl http://localhost:8080/api/v1/posts/fetch_record
 
 # Get specific page with custom size
-curl http://localhost:8080/api/posts/fetch_record?page=1&size=20
+curl http://localhost:8080/api/v1/posts/fetch_record?page=1&size=20
 ```
 
 ### 3. Health Check
 ```bash
-curl http://localhost:8080/api/posts/health
+curl http://localhost:8080/api/v1/posts/health
 ```
 
 ## Features
@@ -75,14 +75,25 @@ post-batch-manager/
 │   │   └── impl/PostServiceImpl.java
 │   ├── repository/PostRepository.java
 │   ├── model/
-│   │   ├── Post.java
-│   │   └── BatchInsertRequest.java
-│   ├── dto/PageResponse.java
-│   ├── config/DatabaseConfig.java
+│   │   ├── Post.java 
+│   ├── dto/
+│   │     └──response/
+│   │        ├──PostApiResponse.java
+│   │        └── PageResponse.java
+│   ├── dto/
+│   │    └──request/
+│   │        └── BatchInsertRequest.java
+│   ├── config/
+│   │   ├── DatabaseConfig.java
+│   │   ├── MapperConfig.java
+│   │   └── WebClientConfig.java
 │   └── exception/
 │       ├── GlobalExceptionHandler.java
+│       ├── BatchInsertException.java
 │       └── ResourceNotFoundException.java
 ├── src/main/resources/
+│   ├──db/
+│   │   └──test-data.sql
 │   └── application.properties
 └── pom.xml
 ```
